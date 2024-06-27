@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Perfect Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Find Your Perfect Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#homes">Homes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Find Your Perfect Home</h1>
+                        <p>Discover the ideal place to live in your favorite city. Explore our listings and find the
+                            perfect home for you and your family.</p>
+                        <a href="#homes" class="btn btn-primary">View Homes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="C:\Users\Hp\OneDrive\Desktop\Task 2\mumbai scape.jpeg" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>About Us</h2>
+                        <p>We are a team passionate about helping you find your dream home in the city you love. Our
+                            mission is to make the process of finding and buying a home as easy and enjoyable as
+                            possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Homes Section -->
+        <section class="homes" id="homes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Find Your Home</h2>
+                        <p>Explore our listings of homes in your favorite city. From cozy apartments to spacious
+                            houses, we have something for everyone.</p>
+                        <a href="#" class="btn btn-secondary">View Listings</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="home-images">
+                            <img src="C:\Users\Hp\OneDrive\Desktop\Task 2\1.jpeg" alt="Home 1" class="img-fluid home-image">
+                            <img src="C:\Users\Hp\OneDrive\Desktop\Task 2\2.jpeg" alt="Home 2" class="img-fluid home-image">
+                            <img src="C:\Users\Hp\OneDrive\Desktop\Task 2\3.jpeg" class="img-fluid home-image">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Contact Us</h2>
+                        <p>Have questions or want to know more about our listings? Feel free to get in touch with us.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2024 Find Your Perfect Home. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (event) {
+                event.preventDefault();
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+            $(window).scroll(function () {
+                $('.fade-in').each(function () {
+                    const bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                    const bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    if (bottom_of_window > bottom_of_element) {
+                        $(this).addClass('fade-in-element');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
